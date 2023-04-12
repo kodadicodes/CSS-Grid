@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+</head>
+<!--
+CSS Grid, web sayfalarının düzenlenmesi için kullanılan bir CSS modülüdür.
+Grid, web sayfasını satır ve sütunlara ayırarak, içeriklerin bu alanlarda yer almasını sağlar.
+Bu sayede, sayfanın düzenlemesi ve tasarımı daha kolay hale gelir.
+
+Örneğin;
+
+grid-template-columns: 100px 200px 300px; kodu, bir CSS Grid öğesi için üç sütun belirler ve her sütunun genişliği
+sırasıyla 100 piksel, 200 piksel ve 300 piksel olarak ayarlanır.
+
+grid-template-columns: 1fr 2fr 3fr; kodu, üç sütunun da sırasıyla (değerlerine göre) grid öğesinin genişliğine göre orantılı bir şekilde genişlemesini sağlar.
+("fr" kısaltması "fraction" kelimesinin kısaltmasıdır. CSS Grid'de "fr" birimi, grid öğesinin kullanılabilir alanının belirli bir yüzdesini temsil eder.)
+
+column-gap: Bu özellik, grid öğesinin sütunlarının arasındaki mesafeyi belirlemek için kullanılır.
+
+"row-gap" özelliği, bir CSS Grid öğesi içindeki satırlar arasındaki boşluğu belirlemek için kullanılır.
+
+"gap" özelliği, bir CSS Grid öğesi içindeki hem sütunlar hem de satırlar arasındaki boşluğu belirlemek için kullanılır.
+"column-gap" ve "row-gap" özelliklerinin yerine kullanılabilir.
+
+"grid-template-rows" özelliği, bir CSS Grid öğesi için satırların boyutunu ve sayısını belirlemek için kullanılır.
+-->
+
+<body>
+    <h2>Column</h2>
+    <div class="container" style="
+        display: grid;
+        grid-template-columns: 100px 200px 300px;
+        ">
+        <div style="background-color: red;">kutu1</div>
+        <div style="background-color: yellow;">kutu2</div>
+        <div style="background-color: turquoise;">kutu3</div>
+    </div>   
+    <div class="container" style="
+        margin-top: 30px;
+        display: grid;
+        grid-template-columns: 1fr 2fr 3fr;
+        ">
+        <div style="background-color: red;">kutu1</div>
+        <div style="background-color: yellow;">kutu2</div>
+        <div style="background-color: turquoise;">kutu3</div>
+    </div>
+    <div class="container" style="
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 10px;
+    row-gap: 10px;
+    ">
+    <div style="background-color: red; height: 100px;">kutu1</div>
+    <div style="background-color: yellow; height: 100px;">kutu2</div>
+    <div style="background-color: turquoise; height: 100px;">kutu3</div>
+    <div style="background-color: purple; height: 100px;">kutu3</div>
+    <div style="background-color: green; height: 100px;">kutu3</div>
+    <div style="background-color: blue; height: 100px;">kutu3</div>
+    </div>
+    <div class="container" style="
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 28px;
+    ">
+    <div style="background-color: red; height: 100px;">kutu1</div>
+    <div style="background-color: yellow; height: 100px;">kutu2</div>
+    <div style="background-color: turquoise; height: 100px;">kutu3</div>
+    <div style="background-color: purple; height: 100px;">kutu3</div>
+    <div style="background-color: green; height: 100px;">kutu3</div>
+    <div style="background-color: blue; height: 100px;">kutu3</div>
+    </div>
+    <h2>Row</h2>
+    <div class="container" style="
+    display: grid;
+    margin-top: 30px;
+    gap: 10px;
+    grid-template-rows: 50px 100px;
+    ">
+    <div style="background-color: red;">kutu1</div>
+    <div style="background-color: yellow;">kutu2</div>
+</div>
+</body>
+
+</html>
